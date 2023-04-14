@@ -38,15 +38,15 @@ class BudgetInputView(APIView):
         long = serializer.validated_data['long']
         budget = serializer.validated_data['budget']
 
-        try:
-            result = budget_loc_recommendation(
-                lat=lat, long=long, budget=budget)
-            context = {
-                'data': result
-            }
-            return Response(context)
-        except Exception:
-            return Response({'error': "Couldn't find tourist attraction around you"}, status=400)
+        # try:
+        result = budget_loc_recommendation(
+            lat=lat, long=long, budget=budget)
+        context = {
+            'data': result
+        }
+        return Response(context)
+        # # except Exception:
+        #     return Response({'error': "Couldn't find tourist attraction around you"}, status=400)
 
 
 class TypeInputView(APIView):

@@ -6,8 +6,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 
 def budget_loc_recommendation(lat, long, budget):
     # Filter the data based on the user's budget
-    data = pd.read_csv(
-        '/home/ayotech/tourist_env/tourist_attraction_api/api/tourism_data.csv')
+    data = pd.read_csv(r'C:\Users\Bluechip\Documents\python-docs\ml-api\tourist_attraction_api\api\tourism_data.csv')
     data = data[data['price'] <= budget]
 
     # Compute the distance matrix between tourist places and user location
@@ -71,8 +70,7 @@ def budget_loc_recommendation(lat, long, budget):
 
 def tourism_recommendation(lat, long, budget=1000):
     # Filter the data based on the user's budget
-    data = pd.read_csv(
-        '/home/ayotech/tourist_env/tourist_attraction_api/api/tourism_data.csv')
+    data = pd.read_csv(r'C:\Users\Bluechip\Documents\python-docs\ml-api\tourist_attraction_api\api\tourism_data.csv')
     data = data[data['price'] <= budget]
 
     # Compute the distance matrix between tourist places and user location
@@ -136,8 +134,7 @@ def tourism_recommendation(lat, long, budget=1000):
 
 def tourism_radius_recommendation(lat, long, max_distance, budget=1000):
     # Filter the data based on the user's budget
-    data = pd.read_csv(
-        '/home/ayotech/tourist_env/tourist_attraction_api/api/tourism_data.csv')
+    data = pd.read_csv(r'C:\Users\Bluechip\Documents\python-docs\ml-api\tourist_attraction_api\api\tourism_data.csv')
     data = data[data['price'] <= budget]
 
     # Compute the distance matrix between tourist places and user location
@@ -201,8 +198,7 @@ def tourism_radius_recommendation(lat, long, max_distance, budget=1000):
 def tourist_type_recommendation(lat, long, preferred_type, max_distance=500):
     # Filter the data based on the user's budget
     budget = 1000
-    data = pd.read_csv(
-        '/home/ayotech/tourist_env/tourist_attraction_api/api/tourism_data.csv')
+    data = pd.read_csv(r'C:\Users\Bluechip\Documents\python-docs\ml-api\tourist_attraction_api\api\tourism_data.csv')
     data = data[data['price'] <= budget]
 
     # Compute the distance matrix between tourist places and user location
